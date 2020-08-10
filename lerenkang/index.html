@@ -1,0 +1,985 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>北京乐仁康健康咨询有限公司</title>
+    <!-- <link rel="canonical" href="https://www.bayer.com/"/>-->
+    <!-- <link rel="dns-prefetch" href="https://shared.bayer.com">-->
+    <!-- <link rel="preconnect" href="https://shared.bayer.com">-->
+    <link rel="stylesheet" href="css/above-the-fold.css">
+    <link rel="stylesheet" href="css/async.css">
+    <link rel="stylesheet" type="text/css" href="css/standard.css">
+    <link rel="shortcut icon" href="image/common/icon.jpg" />
+    <style>
+        /* 布局css样式 */
+        body {
+            overflow-x: hidden;
+        }
+
+        .box-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: flex-start;
+        }
+
+        .slider-img {
+            width: 100%;
+            position: relative;
+            flex-wrap: nowrap;
+            left: 0;
+            transition: all 0.8s;
+        }
+
+        .slider-img picture {
+            flex-grow: 1;
+            height: 100%;
+            min-width: 100%;
+        }
+
+        .slider-img img {
+            width: 100%;
+            position: relative;
+            z-index: 0;
+        }
+
+        .slide-dot {
+            position: absolute;
+            top: -20px;
+            z-index: 3;
+            width: 100%;
+            height: 10px;
+            left: 0;
+        }
+
+        .slide-dot span {
+            display: block;
+            float: left;
+            margin-left: 15px;
+            background-color: #FFFFFF;
+            min-width: 15px;
+            max-width: 15px;
+            min-height: 15px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.50);
+            cursor: pointer
+        }
+
+        .hero__line,
+        .angle,
+        .hero__text,
+        .hero-angle-left {
+            z-index: 2;
+        }
+
+        .news .h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+    <!--[if lt IE 10]>
+      <script src="//shared.bayer.com/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script>
+        function classRemove(s, a) {
+
+            s.classList ? s.classList.remove(a) : s.className = s.className.replace(new RegExp("\\b" + a + "\\b", "g"),
+
+                "")
+
+        }
+
+        function classAdd(s, a) {
+
+            s.classList ? s.classList.add(a) : classHas(s, a) || (s.className += " " + a)
+
+        }
+
+        function classHas(s, a) {
+
+            return s.classList ? s.classList.contains(a) : new RegExp("\\b" + a + "\\b").test(s.className)
+
+        }
+
+        classRemove(document.documentElement, 'no-js');
+
+        classAdd(document.documentElement, 'js');
+    </script>
+    <style>
+        @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+            .custom-dimension .teaser-text {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+
+        @media only screen and (min-width: 64em) {
+            .h1-hero {
+                font-size: 40px;
+            }
+        }
+
+        @media only screen and (min-width: 90.063em) {
+            .h1-hero {
+                font-size: 50px;
+            }
+        }
+
+        @media only screen and (min-width: 64em) {
+            .teaserlist .teaser--push-up {
+                margin-top: -45px;
+            }
+
+            /*.teaserlist article>.teaser-calendar { margin-left:72px; }*/
+        }
+
+        @media only screen and (min-width: 1440px) {
+            .teaserlist .teaser--push-up {
+                margin-top: -55px;
+            }
+        }
+
+        @media only screen and (max-width: 63.938em) {
+            .hero img {
+                height: calc(100vw * 0.4625);
+                min-width: calc((100vw * .4625) * 2.5788);
+                transform: translateX(-12%);
+            }
+        }
+
+        .follow-us {
+            position: relative;
+        }
+
+        .follow-us div:not(.followNext) {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ee0176;
+            margin-left: 20px;
+        }
+
+        .follow-us div:not(.followNext):hover {
+            background-color: #2b5ebc;
+        }
+
+        .follow-us div:first-child {
+            margin-left: 0;
+        }
+
+        .follow-us div img {
+            width: 35px;
+        }
+
+        .followNext {
+            position: absolute;
+            top: -70px;
+            display: none;
+            background-color: #ee0176;
+            padding: 15px;
+        }
+
+        .follow-us>div:nth-of-type(2) {
+            padding: 0;
+            top: -130px;
+        }
+
+        div.followNext img {
+            width: 120px;
+        }
+
+        .intro h3{
+            color: #2e75b5;
+            font-weight: 500;
+        }
+        .intro p{
+            text-indent: 2em;
+            text-align: left;
+        }
+        .intro p:last-child{
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body class="homepage scheme-green en">
+    <form method="post" action="./homepage.aspx" id="aspnetForm">
+        <div class="aspNetHidden">
+            <input type="hidden" name="CacheStorereferer" id="CacheStorereferer"
+                value="96fcd976-9b27-18dd-208b-e86298c8402f" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" /></div>
+        <!--##nosearch##-->
+        <div class="wrapper">
+            <div class="page" id="page">
+                <!-- <div class="pageheader">-->
+                <!-- <header id="header">-->
+                <!-- <a href="/" title="Homepage" class="logo"><img src="image/common/logo.png" aria-label="Bayer" alt="" /></a>-->
+                <!-- <div class="site-identifier site-identifier&#45;&#45;short"><a href="/" title="Homepage" style="font-weight: 400;">乐仁康健康</a></div>-->
+                <!-- </header>-->
+                <!-- <nav role="navigation" class="navigation">-->
+                <!-- <ul id="mega-menu-1" class="megamenu">-->
+                <!-- <li class="n2"><a href="index.html#aspnetForm" class="haschild">首页</a></li>-->
+                <!-- <li class="n3"><a href="index.html#product" class="haschild">产品与服务</a>-->
+                <!-- &lt;!&ndash; <ul class="newsub">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="megaTsrBx">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <h2 class="thdln">产品与服务</h2>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <a href="#"><img class="lazy" width="280" height="158" src="image/index/ph.png"&ndash;&gt;-->
+                <!-- &lt;!&ndash; data-src="image/index/nav-product560.png" alt="" /></a>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <p>为了更好的创新和发展，我们将原有的业务进行重组，并创建了如今的三个事业部。 </p>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <div class="lnk"><a href="#">Overview</a></div>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="newlevel2">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="/index.php/BayerProducts/xinzeng?num=">免疫科技</a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; &lt;!&ndash; <li class="haschild"><a href="/index.php/BayerProducts/index">免疫科技</a>&ndash;&gt;&ndash;&gt;-->
+                <!-- &lt;!&ndash; &lt;!&ndash; <ul>&ndash;&gt;&ndash;&gt;-->
+                <!-- &lt;!&ndash; &lt;!&ndash; <li><a href="/index.php/BayerProducts/xinzeng?num=1">处方药</a></li>&ndash;&gt;&ndash;&gt;-->
+                <!-- &lt;!&ndash; &lt;!&ndash; <li><a href="/index.php/BayerProducts/xinzeng?num=2">健康消费品</a></li>&ndash;&gt;&ndash;&gt;-->
+                <!-- &lt;!&ndash; &lt;!&ndash; <li><a href="/index.php/BayerProducts/xinzeng?num=4">作物科学</a></li>&ndash;&gt;&ndash;&gt;-->
+                <!-- &lt;!&ndash; &lt;!&ndash; <li><a href="/index.php/BayerProducts/xinzeng?num=8">动物保健</a></li>&ndash;&gt;&ndash;&gt;-->
+                <!-- &lt;!&ndash; &lt;!&ndash; </ul>&ndash;&gt;&ndash;&gt;-->
+                <!-- &lt;!&ndash; &lt;!&ndash; </li>&ndash;&gt;&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="/index.php/BayerProducts/xinzeng?num=">干细胞科技</a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="/index.php/BayerProducts/xinzeng?num=">监控管理</a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- </li>-->
+                <!-- <li class="n4"><a href="index.html#knowledge" class="haschild">健康科技</a>-->
+                <!-- &lt;!&ndash; <ul class="newsub">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="megaTsrBx megaTsrBx&#45;&#45;simple">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <h2 class="thdln">健康科技</h2>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <a href="#"><img class="lazy" width="280" height="158" src="image/index/ph.png"&ndash;&gt;-->
+                <!-- &lt;!&ndash; data-src="image/index/nav-technology560.png" alt="" /></a>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <p>了解更多关于我们的经济，生态和社会的挑战和机遇。 </p>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="newlevel2">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="/index.php/Develop/target">乐仁康知识中心</a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- </li>-->
+                <!-- <li class="n5"><a href="index.html#news" class="haschild">行业动态</a>-->
+                <!-- &lt;!&ndash; <ul class="newsub">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="megaTsrBx megaTsrBx&#45;&#45;simple">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <h2 class="thdln">行业动态</h2>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <a href="#"><img class="lazy" width="280" height="158" src="image/index/ph.png"&ndash;&gt;-->
+                <!-- &lt;!&ndash; data-src="image/index/nav-news560.png" alt="" /></a>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <p>作为一家具有高度社会责任感的企业，拜耳集团在其开展运营的世界各地履行自己作为企业公民的责任。 </p>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="newlevel2">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="/index.php/SheHuiZeRen/VolunteerAssociation">新闻</a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- </li>-->
+                <!-- <li class="n6"><a class="haschild">会员中心</a>-->
+                <!-- &lt;!&ndash; <ul class="newsub">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="megaTsrBx megaTsrBx&#45;&#45;simple">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <h2 class="thdln">会员中心</h2>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <a href="#"><img class="lazy" width="280" height="158" src="image/index/ph.png"&ndash;&gt;-->
+                <!-- &lt;!&ndash; data-src="assert/image/index/nav" alt="" /></a>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <p>会员介绍 </p>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- </li>-->
+                <!-- <li class="n7"><a href="index.html#aboutUs" class="haschild">关于我们</a>-->
+                <!-- &lt;!&ndash; <ul class="newsub">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="megaTsrBx megaTsrBx&#45;&#45;simple">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <h2 class="thdln">关于我们</h2>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <a href="#"><img class="lazy" width="280" height="158" src="image/index/ph.png"&ndash;&gt;-->
+                <!-- &lt;!&ndash; data-src="image/index/nav-aboutus560.png" alt="" /></a>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <p>创新不仅对拜耳应付全球挑战起到重要作用，同时也是拜耳实现未来发展的核心动力。 </p>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="newlevel2">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="/index.php/Innovation/researchAtBayer">企业介绍</a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="/index.php/Innovation/inventiveTalent">科研实力</a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="/index.php/Innovation/researchAtBayer">愿景与使命</a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="/index.php/Innovation/inventiveTalent">经验理念</a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- </li>-->
+                <!-- &lt;!&ndash; <li class="n8"><a href="#aboutUs" class="haschild">招贤纳士</a>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <ul class="newsub">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="megaTsrBx megaTsrBx&#45;&#45;simple">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <h2 class="thdln">招贤纳士</h2>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <a href="https://career.bayer.cn/zh/index.html"><img class="lazy" width="280"&ndash;&gt;-->
+                <!-- &lt;!&ndash; height="158" src="image/index/ph.png"&ndash;&gt;-->
+                <!-- &lt;!&ndash; data-src="image/index/nav-joinus560.png" alt="" /></a>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <p>拜耳集团业务的多样性和国际化为其员工提供了广阔的个人发展平台。 </p>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li class="newlevel2">&ndash;&gt;-->
+                <!-- &lt;!&ndash; <ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="https://career.bayer.cn/zh/index.html">人才理念 </a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; <li><a href="https://career.bayer.cn/zh/index.html">人才招聘 </a></li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </ul>&ndash;&gt;-->
+                <!-- &lt;!&ndash; </li>&ndash;&gt;-->
+                <!-- <li class="n9"><a href="index.html#contactUs" class="haschild">联系我们</a></li>-->
+                <!-- </ul>-->
+                <!-- </nav>-->
+                <!-- </div>-->
+                <script src="js/nav.js"></script>
+                <!--##/nosearch##-->
+                <div class="service"></div>
+                <div class="hero-container" data-ga-label="Hero">
+                    <div id="hero" class="hero hero13 hero--text-left">
+                        <div class="angle"></div>
+                        <div class="hero-angle-left"></div>
+                        <div class="hero__text">
+                            <div class="overline">Support Heal Of Life</div>
+                            <h1 class="h1-hero">用领先的科技支持生命的自我修复</h1>
+                            <span class="readmore">
+                                <a href="productsAndServices.html">了解更多</a></span>
+                        </div>
+                        <div class="hero__line"></div>
+                        <div class="box-row slider-img">
+                            <picture>
+                                <source type="image/webp" srcset="image/index/banner1.jpg 1600w"
+                                    sizes="            (min-width: 768px)  calc(100vw - 200px),            100vw" />
+                                <source srcset="image/index/banner1.jpg 1600w"
+                                    sizes="            (min-width: 768px)  calc(100vw - 200px),            100vw" />
+                                <img alt="" src="image/index/banner1.jpg" class="slide-img-item" /></picture>
+                            <picture>
+                                <source type="image/webp" srcset="image/index/banner2.jpg 1600w"
+                                    sizes="            (min-width: 768px)  calc(100vw - 200px),            100vw" />
+                                <source srcset="image/index/banner2.jpg 1600w"
+                                    sizes="            (min-width: 768px)  calc(100vw - 200px),            100vw" />
+                                <img alt="" src="image/index/banner2.jpg" /></picture>
+                            <picture>
+                                <source type="image/webp" srcset="image/index/banner3.jpg 1600w"
+                                    sizes="            (min-width: 768px)  calc(100vw - 200px),            100vw" />
+                                <source srcset="image/index/banner3.jpg 1600w"
+                                    sizes="            (min-width: 768px)  calc(100vw - 200px),            100vw" />
+                                <img alt="" src="image/index/banner3.jpg" /></picture>
+                            <picture>
+                                <source type="image/webp" srcset="image/index/banner4.jpg 1600w"
+                                    sizes="            (min-width: 768px)  calc(100vw - 200px),            100vw" />
+                                <source srcset="image/index/banner4.jpg 1600w"
+                                    sizes="            (min-width: 768px)  calc(100vw - 200px),            100vw" />
+                                <img alt="" src="image/index/banner4.jpg" /></picture>
+                        </div>
+                        <div class="slide-dot box-between">
+                            <span onclick="toSlideImg(0)"></span>
+                            <span onclick="toSlideImg(1)"></span>
+                            <span onclick="toSlideImg(2)"></span>
+                            <span onclick="toSlideImg(3)"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--##nosearch##-->
+                <section class="main-section">
+                    <!--googleoff: index-->
+                    <div class="unit size-col-a lfthnd"></div>
+                    <!--googleon: index-->
+                    <!--##/nosearch##-->
+                    <!--##CONTENT1##-->
+                    <!--##CONTENT2##-->
+                    <aside class="unit size-col-a margi"></aside>
+                    <main>
+                        <!--产品与服务-->
+                        <div class="section" id="product">
+                            <h2 class="h2-section">产品与服务</h2>
+                        </div>
+                        <!--产品与服务-->
+                        <div class="teaserlist">
+                            <article data-ga-label="Teaser" class="teaser--a teaser--smalltext">
+                                <div>
+                                    <a href="productsAndServices.html?topic=1">
+                                        <div class="teaser-text  teaser-text--bg-purple teaser-text--right"
+                                            target="_blank">
+                                            <div class="overline">Stem cell</div>
+                                            <h3 class="h3">干细胞调理</h3>
+                                            <span class="readmore">了解更多</span>
+                                        </div>
+                                        <picture>
+                                            <source type="image/webp"
+                                                data-srcset="image/index/hv-beduerfnisteaser-690x388.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <source data-srcset="image/index/hv_beduerfnisteaser_690x388.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <img alt="" data-src="image/index/hv-beduerfnisteaser-690x388.jpg"
+                                                class="lazyload" /></picture>
+                                    </a>
+                                </div>
+                            </article>
+                            <article data-ga-label="Teaser" class="teaser--c teaser--smalltext teaser--push-down">
+                                <div>
+                                    <a href="productsAndServices.html?topic=2">
+                                        <div class="teaser-text  teaser-text--bg-light-blue" target="_blank">
+                                            <div class="overline">Immune cells</div>
+                                            <h3 class="h3">免疫细胞调理</h3>
+                                            <span class="readmore">了解更多</span>
+                                        </div>
+                                        <picture>
+                                            <source type="image/webp"
+                                                data-srcset="image/index/earth-apple_content_690x388_en.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <source data-srcset="image/index/earth-apple_content_690x388_en.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <img alt="" data-src="image/index/earth-apple_content_690x388_en.jpg"
+                                                class="lazyload" /></picture>
+                                    </a>
+                                </div>
+                            </article>
+                            <article data-ga-label="Teaser" class="teaser--b teaser--smalltext">
+                                <div>
+                                    <a href="productsAndServices.html?topic=3">
+                                        <div class="teaser-text  teaser-text--bg-dark-blue teaser-text--right">
+                                            <div class="overline">Health management</div>
+                                            <h3 class="h3">健康管理</h3>
+                                            <span class="readmore">了解更多</span>
+                                        </div>
+                                        <picture>
+                                            <source type="image/webp" data-srcset="image/index/reading07-1294.png 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <source data-srcset="image/index/reading07-1294.png 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <img alt="" data-src="image/index/reading07-1294.png" class="lazyload" />
+                                        </picture>
+                                    </a>
+                                </div>
+                            </article>
+                            <article data-ga-label="Teaser" class="teaser--c teaser--with-readmore">
+                                <div>
+                                    <a href="productsAndServices.html?topic=8">
+                                        <div class="teaser-text  teaser-text--bg-magenta">
+                                            <div class="overline">Others</div>
+                                            <h3 class="h3">其他</h3>
+                                            <span class="readmore">了解更多</span>
+                                        </div>
+                                        <picture>
+                                            <source type="image/webp"
+                                                data-srcset="image/index/teaser-landwirt-ueberprueft-seine-saat.webp 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <source
+                                                data-srcset="image/index/teaser-landwirt-ueberprueft-seine-saat.webp 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <img alt=""
+                                                data-src="image/index/teaser-landwirt-ueberprueft-seine-saat.webp"
+                                                class="lazyload" /></picture>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="cc1" class="cc-teaser cc-teaser-disabled &#xA;         cc1">
+                            <div class="cc-teaser__inner">
+                                <a href="productsAndServices.html" target="_blank" class="cc-teaser__link">
+                                    <div class="cc-teaser-box">
+                                        <div class="cc-teaser__text  &#xA;            ">
+                                            <div class="overline">Support Heal Of Life</div>
+                                            <h3 class="h3">用领先的科技支持生命的自我修复</h3>
+                                            <span class="readmore">了解更多</span>
+                                        </div>
+                                        <div class="cc-teaser__cover"></div>
+                                        <div class="cc-teaser__cover--top"></div>
+                                        <div class="cc-teaser__line"></div>
+                                        <div class="cc-teaser__line--left"></div>
+                                        <div class="ar-box ratio16_9 ccvideo">
+                                            <video autoplay="autoplay" loop="loop" muted="muted"
+                                                playsinline="playsinline"
+                                                data-src="image/index/production ID_4035407.mp4"
+                                                data-src-webm="image/index/production ID_4035407.webm">
+                                                <source data-src="image/index/production ID_4035407.mp4"
+                                                    type="video/mp4" /></video>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--健康科技-->
+                        <div class="teaserlist" id="knowledge">
+                            <article data-ga-label="Teaser" class="teaser--b teaser--smalltext">
+                                <div>
+                                    <a href="productsAndServices.html?topic=4">
+                                        <div class="teaser-text  teaser-text--bg-brightgreen teaser-text--right">
+                                            <div class="overline">Stem cell</div>
+                                            <h3 class="h3">神奇的干细胞</h3>
+                                            <span class="readmore">了解更多</span>
+                                        </div>
+                                        <picture>
+                                            <source type="image/webp"
+                                                data-srcset="image/index/testing-laboratory-berlin_690x388.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <source data-srcset="image/index/testing-laboratory-berlin_690x388.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <img alt="" data-src="image/index/testing-laboratory-berlin_690x388.jpg"
+                                                class="lazyload" /></picture>
+                                    </a>
+                                </div>
+                            </article>
+                            <article data-ga-label="Teaser" class="teaser--b teaser--smalltext">
+                                <div>
+                                    <a href="productsAndServices.html?topic=5">
+                                        <div class="teaser-text teaser-text--bg-dark-blue">
+                                            <div class="overline">Immune cells</div>
+                                            <h3 class="h3">生命的卫士
+                                                <br>免疫细胞</h3>
+                                            <span class="readmore">了解更多</span>
+                                        </div>
+                                        <picture>
+                                            <source type="image/webp"
+                                                data-srcset="image/index/q1_2020_teaser_690x388.webp 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <source data-srcset="image/index/q1_2020_teaser_690x388.webp 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <img alt="" data-src="image/index/q1_2020_teaser_690x388.webp"
+                                                class="lazyload" /></picture>
+                                    </a>
+                                </div>
+                            </article>
+                            <article data-ga-label="Teaser" class="teaser--b teaser--smalltext">
+                                <div>
+                                    <a href="productsAndServices.html?topic=6">
+                                        <div class="teaser-text  teaser-text--bg-dark-green teaser-text--right">
+                                            <div class="overline">Health management</div>
+                                            <h3 class="h3">健康管理</h3>
+                                            <span class="readmore">了解更多</span>
+                                        </div>
+                                        <picture>
+                                            <source type="image/webp"
+                                                data-srcset="image/index/pollen_content_690x388.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <source data-srcset="image/index/pollen_content_690x388.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <img alt="" data-src="image/index/pollen_content_690x388.jpg"
+                                                class="lazyload" /></picture>
+                                    </a>
+                                </div>
+                            </article>
+                            <article data-ga-label="Teaser" class="teaser--c teaser--with-readmore">
+                                <div>
+                                    <a href="productsAndServices.html?topic=7">
+                                        <div class="teaser-text  teaser-text--bg-magenta">
+                                            <div class="overline">Others</div>
+                                            <h3 class="h3">更多科技</h3>
+                                            <span class="readmore">了解更多</span>
+                                        </div>
+                                        <picture>
+                                            <source type="image/webp"
+                                                data-srcset="image/index/8579d58bfd6557ac903a8da7acf2e51.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <source data-srcset="image/index/8579d58bfd6557ac903a8da7acf2e51.jpg 690w"
+                                                sizes="            (min-width: 500px) 690px,            100vw" />
+                                            <img alt="" data-src="image/index/8579d58bfd6557ac903a8da7acf2e51.jpg"
+                                                class="lazyload" /></picture>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <!--行业动态-->
+                        <div id="news">
+                            <div class="section">
+                                <h2 class="h2-section">行业动态</h2>
+                            </div>
+                            <div class="news-grid f-grid f-grid--1of2">
+                                <div class="news-homepage f-grid__cell">
+                                    <div class="newslist module-midblue">
+                                        <article class="news">
+                                            <div class="news__bdy ofv">
+                                                <div class="news__date">2020年5月21日</div>
+                                                <div class="restricted__label">营养与健康所等发现乳腺癌肿瘤干细胞调控新机制:</div>
+                                                <h3 class="h3">
+                                                    5月19日，国际学术期刊《自然-通讯》（NatureCommunications）在线发表了中国科学院上海营养与健康研究所胡国宏研的最新研究成果，阐释了SH3RF3通过促进JNK-JUN信号通路激活并促进PTX3表达，最终提升乳腺癌肿瘤细胞干性特征的功能和机制。这一研究发现将促进基于肿瘤干细胞的诊断和治疗策略开发。
+                                                </h3>
+                                                <a class="readmore"
+                                                    href="http://tech.gmw.cn/2020-05/21/content_33847988.htm"
+                                                    target="view_window">了解更多</a>
+                                            </div>
+                                        </article>
+                                        <article class="news">
+                                            <div class="news__bdy">
+                                                <div class="news__date">2020年5月20日</div>
+                                                <div class="restricted__label">科学家揭示ZKSCAN3延缓人干细胞衰老的表观遗传机制:</div>
+                                                <h3 class="h3">
+                                                    ZKSCAN3是具有SCAN结构域的锌指蛋白家族成员之一，曾被报道作为转录调节因子抑制自噬相关基因的表达。然而目前国际上关于ZKSCAN3的研究主要基于肿瘤细胞系及模式动物，其在正常人类干细胞等二倍体细胞中的生物学功能尚不明确。
+                                                </h3>
+                                                <a class="readmore"
+                                                    href="http://www.cas.cn/syky/202005/t20200520_4746967.shtml"
+                                                    target="view_window">了解更多</a>
+                                            </div>
+                                        </article>
+                                        <article class="news">
+                                            <div class="news__bdy">
+                                                <div class="news__date">2020年5月18日</div>
+                                                <div class="restricted__label">点亮“星星的孩子”，干细胞研究为自闭症带来希望:</div>
+                                                <h3 class="h3">
+                                                    孤独症又称自闭症，是一种脑部功能异常、以社会交往障碍、语言发育障碍、兴趣狭窄和行为方式刻板为主要特征的先天性大脑发育障碍性疾病。广义上的孤独症既包括我们熟知的典型自闭症（孤独症），也包括不典型孤独症、阿斯伯格综合症等孤独症谱系障碍。
+                                                </h3>
+                                                <a class="readmore" href="https://new.qq.com/rain/a/20200518A08MTV00"
+                                                    target="view_window">了解更多</a>
+                                            </div>
+                                        </article>
+                                        <article class="news">
+                                            <div class="news__bdy">
+                                                <div class="news__date">2020年5月11日</div>
+                                                <div class="restricted__label">免疫细胞和病毒战斗全过程:</div>
+                                                <h3 class="h3">
+                                                    在人类基因组中有10万个已知病毒病毒片段占我们DNA的8%以上，人类免疫系统与病毒的相生相杀一直在继续……无论何时，在守护生命安全和身体健康的道路上，你我永远都不会独行！
+                                                </h3>
+                                                <a class="readmore"
+                                                    href="http://www.xinhuanet.com/science/2020-05/11/c_139017924.htm"
+                                                    target="view_window">了解更多</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--关于我们-->
+                        <div id="aboutUs">
+                            <div class="section">
+                                <h2 class="h2-section">关于我们</h2>
+                                <div class="u-hide-small">
+                                    <div class="intro">
+                                        <h3>用世界领先的科学技术支撑生命的自我修复</h3>
+                                        <p>北京乐仁康健康咨询有限公司成立于2018年，主要从事和经营以细胞科技为核心的健康管理产品及服务，主要涵盖免疫科技、干细胞科技、健康管理服务三大领域。</p>
+                                        <p>自成立以来，公司积极布局国内外细胞科技领域的上、中、下游产业，并与科研院所、研发企业、三甲医院、科研专家等广泛建立合作关系，以支撑大健康产业的可持续发展。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skewed-teaserlist" data-ga-label="Teaser Skewed">
+                                <div class="skewed-teaser">
+                                    <a href="aboutUs.html?topic=1">
+                                        <div class="skewed-teaser__img">
+                                            <picture>
+                                                <source type="image/webp"
+                                                    data-srcset="image/index/teaser-lachende-patientin-in-krankenhausbett.webp 690w"
+                                                    sizes="            (min-width: 500px) 690px,            100vw" />
+                                                <source
+                                                    data-srcset="image/index/teaser-lachende-patientin-in-krankenhausbett.webp 690w"
+                                                    sizes="            (min-width: 500px) 690px,            100vw" />
+                                                <img alt=""
+                                                    data-src="image/index/teaser-lachende-patientin-in-krankenhausbett.webp" />
+                                            </picture>
+                                        </div>
+                                        <div class="skewed-teaser__bdy">
+                                            <article>
+                                                <h3 class="h3">品牌始源</h3>
+                                                <p>
+                                                    <span class="readmore">了解更多</span></p>
+                                            </article>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="skewed-teaser">
+                                    <a href="aboutUs.html?topic=2">
+                                        <div class="skewed-teaser__img">
+                                            <picture>
+                                                <source type="image/webp"
+                                                    data-srcset="image/index/teaser-apothekerin-und-patientin.webp 690w"
+                                                    sizes="            (min-width: 500px) 690px,            100vw" />
+                                                <source
+                                                    data-srcset="image/index/teaser-apothekerin-und-patientin.webp 690w"
+                                                    sizes="            (min-width: 500px) 690px,            100vw" />
+                                                <img alt=""
+                                                    data-src="image/index/teaser-apothekerin-und-patientin.webp" />
+                                            </picture>
+                                        </div>
+                                        <div class="skewed-teaser__bdy">
+                                            <article>
+                                                <h3 class="h3">企业理念</h3>
+                                                <p>
+                                                    <span class="readmore">了解更多</span></p>
+                                            </article>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="skewed-teaser">
+                                    <a href="aboutUs.html?topic=3">
+                                        <div class="skewed-teaser__img">
+                                            <picture>
+                                                <source type="image/webp" data-srcset="image/index/team.jpg 690w"
+                                                    sizes="(min-width: 500px) 690px,100vw" />
+                                                <source data-srcset="image/index/team.jpg 690w"
+                                                    sizes="(min-width: 500px) 690px,100vw" />
+                                                <img alt="" data-src="image/index/team.jpg" /></picture>
+                                        </div>
+                                        <div class="skewed-teaser__bdy">
+                                            <article>
+                                                <h3 class="h3">专家团队</h3>
+                                                <p>
+                                                    <span class="readmore">了解更多</span></p>
+                                            </article>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="skewed-teaser">
+                                    <a href="aboutUs.html?topic=4">
+                                        <div class="skewed-teaser__img">
+                                            <picture>
+                                                <source type="image/webp"
+                                                    data-srcset="image/index/teaser-bauer-fuettert-sein-kalb.webp 690w"
+                                                    sizes="(min-width: 500px) 690px,100vw" />
+                                                <source
+                                                    data-srcset="image/index/teaser-bauer-fuettert-sein-kalb.webp 690w"
+                                                    sizes="(min-width: 500px) 690px,100vw" />
+                                                <img alt=""
+                                                    data-src="image/index/teaser-bauer-fuettert-sein-kalb.webp" />
+                                            </picture>
+                                        </div>
+                                        <div class="skewed-teaser__bdy">
+                                            <article>
+                                                <h3 class="h3">招贤纳士</h3>
+                                                <p>
+                                                    <span class="readmore">了解更多</span></p>
+                                            </article>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </section>
+            </div>
+            <!--底部-->
+            <!-- <footer class="page-footer">-->
+            <!-- <div class="service-footer-container" id="contactUs">-->
+            <!-- <div class="service-footer-container2" data-ga-category="Footer">-->
+            <!-- <div class="service-footer" data-ga-label="Content Links">-->
+            <!-- <div class="service-footer__col">-->
+            <!-- <h4>联系我们</h4>-->
+            <!-- <div class="follow-us">-->
+            <!-- <div class="followPrev"><img src="image/common/wx.png" alt="图标"></div>-->
+            <!-- <div class="followNext"><img src="image/common/code.png" alt="二维码"></div>-->
+            <!-- <div class="followPrev"><img src="image/common/phone.png" alt="图标"></div>-->
+            <!-- <div class="followNext">联系电话：400-xxx-xxxx</div>-->
+            <!-- <div class="followPrev"><img src="image/common/email.png" alt="图标"></div>-->
+            <!-- <div class="followNext">邮箱地址：lerenkang@lrk.com</div>-->
+            <!-- <div class="followPrev"><img src="image/common/address.png" alt="图标"></div>-->
+            <!-- <div class="followNext">联系地址：北京市朝阳区建国路93号万达广场9号楼九层</div>-->
+            <!-- <div class="followPrev"><img src="image/common/qq.png" alt="图标"></div>-->
+            <!-- <div class="followNext">暂未开放，敬请期待</div>-->
+            <!-- </div>-->
+            <!-- </div>-->
+            <!-- </div>-->
+            <!-- </div>-->
+            <!-- </div>-->
+            <!-- <a href="#" class="page-top shadowDepth1 border-tlr-radius track-event" data-trackname="page-top">Top</a>-->
+            <!-- <div class="content-footer-container">-->
+            <!-- <div class="content-footer">-->
+            <!-- <ul class="legaladvice" style="text-align:center; font-size: 123%;">-->
+            <!-- <li>-->
+            <!-- <ul class="follow-us follow-us-jz">-->
+            <!-- <li class="follow-us__item" style="position: relative;">-->
+            <!-- <a href="index.html#product" class="fl">产品与服务</a>-->
+            <!-- </li>-->
+            <!-- <li class="follow-us__item u-hide-small" style="position: relative;">-->
+            <!-- |-->
+            <!-- </li>-->
+            <!-- <li class="follow-us__item">-->
+            <!-- <a href="index.html#knowledge" class="fl">健康科技</a>-->
+            <!-- </li>-->
+            <!-- <li class="follow-us__item u-hide-small" style="position: relative;">-->
+            <!-- |-->
+            <!-- </li>-->
+            <!-- <li class="follow-us__item">-->
+            <!-- <a href="index.html#news" class="fl">行业动态</a>-->
+            <!-- </li>-->
+            <!-- <li class="follow-us__item u-hide-small" style="position: relative;">-->
+            <!-- |-->
+            <!-- </li>-->
+            <!-- <li class="follow-us__item">-->
+            <!-- <a href="index.html#aboutUs" class="fl">关于我们</a>-->
+            <!-- </li>-->
+            <!-- </ul>-->
+            <!-- <br/>
+        <br/>Copyright © 北京乐仁康健康咨询有限公司 京ICP备8888888号 药监局备案号: (京) -非经营性-8888888 京公网安备 88888888888888号-->
+            <!-- </li>-->
+            <!-- </ul>-->
+            <!-- <div class="printfooter">-->
+            <!-- &lt;!&ndash; REPLACE: current URL &ndash;&gt;-->
+            <!-- </div>-->
+            <!-- </div>-->
+            <!-- </div>-->
+            <!-- </footer>-->
+            <script src="js/footer.js"></script>
+        </div>
+        <script src="js/modernizr.js"></script>
+        <script type="text/javascript" src="js/standard.js"></script>
+    </form>
+    <!--<script src="js/custom.js"></script>-->
+    <script src="js/bayer.js"></script>
+    <script>
+        var slideImg = document.getElementsByClassName("slide-img-item")[0];
+
+        var slideDot = document.getElementsByClassName("slide-dot")[0];
+
+        var dotSpan = slideDot.getElementsByTagName("span");
+
+        var dom = document.getElementsByClassName("slider-img")[0];
+
+        var items = dom.getElementsByTagName("picture");
+
+        dotSpan[0].style.backgroundColor = "#ee0176";
+
+        function toSlideImg() {}
+
+        function sliderImg() {
+
+            var l = 0;
+
+            var lastNode, firstNode;
+
+            var temp;
+
+            var slideTime = 5000;
+
+            var lock = false;
+
+            function jump() {
+
+                for (var i = 0; i < items.length; i++) {
+
+                    items[i].getElementsByTagName("img")[0].style.zIndex = 0;
+
+                    dotSpan[i].style.backgroundColor = "#FFFFFF"
+
+                }
+
+                items[l].getElementsByTagName("img")[0].style.zIndex = 1;
+
+                dotSpan[l].style.backgroundColor = "#ee0176";
+
+                dom.style.left = -l * hero.offsetWidth + "px";
+
+            }
+
+            setInterval(function () {
+
+                    if (lock) {
+
+                        lock = false;
+
+                        return false;
+
+                    }
+
+                    if (l >= items.length - 1) {
+
+                        l = 0;
+
+                    } else if (l < 0) {
+
+                        l = items.length - 1;
+
+                    } else {
+
+                        l++;
+
+                    }
+
+                    jump();
+
+                },
+                slideTime);
+
+            toSlideImg = function (val) {
+
+                l = val;
+
+                lock = true;
+
+                jump();
+
+            }
+
+        }
+
+        window.onload = function () {
+
+            for (var i = 0; i < items.length; i++) {
+
+                items[i].getElementsByTagName("img")[0].style.zIndex = 0;
+
+            }
+
+            items[0].getElementsByTagName("img")[0].style.zIndex = 1;
+
+            slideDot.style.top = slideImg.offsetTop + slideImg.offsetHeight - 20 + "px";
+
+            slideDot.style.left = hero.offsetWidth / 2 - 60 + "px";
+
+            sliderImg();
+
+            browserRedirect({
+                cssUrl: '',
+                jsUrl: '',
+            }, {
+                cssUrl: 'css/android.css',
+                jsUrl: 'js/android.js'
+            }); //判断是移动端还是pc端并加载js或css
+        };
+
+        function browserRedirect(PC, Android) {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM)) {
+                if (!PC.cssUrl && !PC.jsUrl) {
+                    return false;
+                }
+                //电脑端
+                //加载css
+                var linkNode = document.createElement("link");
+                linkNode.setAttribute("rel", "stylesheet");
+                linkNode.setAttribute("type", "text/css");
+                linkNode.setAttribute("href", PC.cssUrl);
+                document.head.appendChild(PC.linkNode);
+                //加载js
+                var scriptNode = document.createElement("script");
+                scriptNode.setAttribute("type", "text/javascript");
+                scriptNode.setAttribute("src", PC.jsUrl);
+                document.head.appendChild(scriptNode);
+            } else if (Android.cssUrl || Android.jsUrl) {
+                //手机端
+                //加载css
+                var oMeta = document.createElement('meta');
+                oMeta.name = 'viewport';
+                oMeta.content =
+                    'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no';
+                document.getElementsByTagName('head')[0].appendChild(oMeta);
+                var linkNode = document.createElement("link");
+                linkNode.setAttribute("rel", "stylesheet");
+                linkNode.setAttribute("type", "text/css");
+                linkNode.setAttribute("href", Android.cssUrl);
+                document.head.appendChild(linkNode);
+                //加载js
+                var scriptNode = document.createElement("script");
+                scriptNode.setAttribute("type", "text/javascript");
+                scriptNode.setAttribute("src", Android.jsUrl);
+                document.head.appendChild(scriptNode);
+            }
+        }
+    </script>
+    <!--<script>-->
+    <!-- loadJS("js/multifilter.js", function () {-->
+    <!-- loadJS("js/multifilter-productshomepage.js", function () {});-->
+    <!-- });-->
+    <!--</script>-->
+    <!--<script src="js/analytics-corp.js"></script>-->
+    <!--<script src="js/disclaimer.js"></script>-->
+    <!--<script src="js/analytics.js"></script>-->
+</body>
+
+</html>

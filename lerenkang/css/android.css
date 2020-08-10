@@ -1,0 +1,23 @@
+.news{
+    padding-left: 2%;
+    width:100%;
+}
+.tab-filter-list{
+    display: inline;
+}
+.tab-filter-list li{
+    width: 100%;
+    
+}
+.follow-us-jz{
+    padding: 0px 10px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.follow-us-jz li{
+    width: 50%;
+    text-align: left;
+}
