@@ -1,1 +1,1037 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>赋能港</title></head><body><div id="app"></div><script src="./bundle.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>整体布局</title>
+    <link rel="stylesheet" href="./style/base.css">
+    <style>
+        #tab-top {
+            width: 100%;
+            background-color: #3C3C3C;
+        }
+
+        .tab-top-item {
+            color: #C1C1C1;
+            font-size: 0.16rem;
+            box-sizing: border-box;
+            padding: 0rem 0.15rem;
+            cursor: pointer;
+        }
+
+        .tab-top-item.icon {
+            height: 0.4rem;
+            color: #3C3C3C;
+        }
+
+        #content {
+            width: 100%;
+            height: 100%;
+            background-color: #1E1E1E;
+        }
+
+        #nav {
+            padding: 0.15rem 0rem;
+            box-sizing: border-box;
+            height: 100%;
+            background-color: #333333;
+            justify-content: space-between;
+        }
+
+        #nav-top {
+            margin-top: 0.2rem;
+        }
+
+        #nav-bottom {
+            margin-bottom: 0.2rem;
+        }
+
+        .nav-item {
+            padding: 0rem 0.15rem;
+            width: 0.3rem;
+            height: 0.3rem;
+            margin-bottom: 0.3rem;
+            background-color: #333333;
+            border-radius: 0.2rem;
+            color: #999999;
+            cursor: pointer;
+        }
+
+        .nav-item.active {
+            color: #FFFFFF;
+        }
+
+        #nav-slider {
+            justify-content: flex-start;
+            height: 100%;
+            transition: all 0.3s;
+            transform: translateY(0rem);
+        }
+
+        #nav-slider>span {
+            height: 0.3rem;
+            width: 0.05rem;
+            background-color: #fff;
+        }
+
+        #tree-viewer {
+            min-width: 4rem;
+            height: 100%;
+        }
+
+        #tree-viewer>.box-column {
+            height: 100%;
+            width: 100%;
+            justify-content: flex-start;
+            background-color: #252526;
+            box-sizing: border-box;
+            display: none;
+        }
+
+        #tree-viewer>.box-column.active {
+            display: flex;
+        }
+
+        .tree-top {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.15rem 0.4rem;
+        }
+
+        .tree-top-title {
+            color: #999999;
+        }
+
+        .tree-more-icon {
+            width: 0.16rem;
+            height: 0.16rem;
+            color: #999999;
+            margin-left: 0.2rem;
+            cursor: pointer;
+        }
+
+        .tree-item {
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            font-size: .15rem;
+            color: #DDDDDD;
+            padding: 0.08rem 0.15rem;
+        }
+
+        .tree-item:not(:last-child) {
+            border-bottom: .01rem solid #999999;
+        }
+
+        .tree-item>.box-between {
+            box-sizing: border-box;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .tree-item-title {
+            font-size: 0.16rem;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        .tree-item .arrow-right-icon {
+            margin-right: 0.08rem;
+        }
+
+        .tree-item .tree-close-icon {
+            width: 0.16rem;
+            height: 0.16rem;
+            color: #FFFFFF;
+            margin-left: 0.2rem;
+        }
+
+        .arrow-right-icon {
+            width: 0.16rem;
+            height: 0.16rem;
+            color: #FFFFFF;
+        }
+
+        .tree-low-item {
+            overflow: hidden;
+            height: 0rem;
+            transition: all 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: flex-start;
+            cursor: pointer;
+            padding-left: 0.1rem !important;
+        }
+
+
+        .tree-low-item:not(.file) {
+            height: auto;
+            display: flex;
+            padding-top: 0rem !important;
+            padding-bottom: 0rem !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        .tree-low-item>span {
+            width: 100%;
+        }
+
+        .tree-item.open>.tree-low-item,
+        .tree-item.open .tree-low-item:not(.close)>.tree-low-item {
+            padding: 0.23rem 0rem 0.18rem 0rem;
+        }
+
+        .tree-item.open .tree-low-item.close .tree-low-item {
+            padding: 0rem !important;
+        }
+
+        .tree-item .tree-low-item:not(.file)>span {
+            cursor: pointer;
+            transition: all 0.3s;
+            height: 0rem;
+            overflow: hidden;
+        }
+
+        .tree-item.open div:not(.close)>.tree-low-item:not(.file)>span {
+            padding: 0.23rem 0rem 0.18rem 0rem;
+        }
+        .tree-item.open div:not(.close)>.tree-low-item:not(.file)>span::before{
+            content: "-";
+        }
+        .tree-item.open div:not(.close)>.tree-low-item:not(.file).close>span::before{
+            content: "+";
+        }
+        .tree-item.open div.close .tree-low-item:not(.file)>span {
+            padding: 0rem !important;
+        }
+        .tree-item .arrow-right-icon {
+            transition: all 0.3s;
+        }
+
+        .tree-item.open .arrow-right-icon {
+            transform: rotateZ(90deg);
+        }
+
+
+        #work-viewer {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: #1E1E1E;
+        }
+
+        #viewer-top {
+            width: 100%;
+            height: .5rem;
+            overflow: auto;
+            background-color: #252526
+        }
+
+        #viewer-top::-webkit-scrollbar {
+            width: .01rem;
+            height: .05rem;
+            cursor: pointer;
+        }
+
+        #viewer-top::-webkit-scrollbar-thumb {
+            border-radius: .01rem;
+            -webkit-box-shadow: inset 0 0 .01rem rgba(200, 200, 200, 0.6);
+            background: rgba(200, 200, 200, 0.6);
+        }
+
+        #viewer-top::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 .01rem rgba(200, 200, 200, 0.6);
+            border-radius: 0;
+            background: rgba(0, 0, 0, 0.1);
+
+        }
+
+        .viewer-title {
+            width: 2rem;
+            min-width: 2rem;
+            height: 100%;
+            background-color: #2D2D2D;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: #969696;
+            font-size: 0.15rem;
+            border-right: #1E1E1E .01rem solid;
+            cursor: pointer;
+        }
+
+        .viewer-title.active {
+            background-color: #1E1E1E;
+            color: #FFFFFF;
+        }
+
+        .viewer-content {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .viewer-content.active {
+            display: flex;
+        }
+
+        #file-text-area {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0.2rem;
+            border: none;
+            resize: none;
+            background-color: #1E1E1E;
+            font-size: 0.2rem;
+            line-height: 0.26rem;
+            letter-spacing: 0.02rem;
+            color: #FFFFFF;
+        }
+
+        #file-text-area:focus {
+            outline: none;
+        }
+
+        #view-viewer-content>div {
+            width: 100%;
+            height: 100%;
+            font-size: .16rem;
+            color: #FFFFFF;
+            box-sizing: border-box;
+            padding: 0.1rem 0.15rem 0.05rem 0.15rem;
+        }
+
+        #view-img {
+            height: 80%;
+        }
+
+        #interface-viewer-content>div {
+            width: 100%;
+            height: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        #interface-list {
+            width: 8rem;
+            font-size: .15rem;
+            color: #FFFFFF;
+        }
+
+        #interface-list>.box-between {
+            padding-left: 0.2rem;
+            width: 100%;
+            box-sizing: border-box;
+            height: 0.4rem;
+            border: #C1C1C1 solid .01rem;
+        }
+
+        #interface-list>.box-between>span {
+            height: 100%;
+            padding: 0rem 0.2rem;
+            color: #DDDDDD;
+            background-color: #666666;
+        }
+
+        #interface-list>.box-center {
+            padding: 0.2rem 0rem;
+        }
+
+        .params-list {
+            width: 100%;
+            font-size: .16rem;
+            border: #C1C1C1 solid .01rem;
+        }
+
+        #interface-list>.box-center>span {
+            width: 2rem;
+        }
+
+        #interface-list>.box-center>font {
+            font-size: .16rem;
+            color: #567332;
+            line-height: 0.25rem;
+        }
+
+        .params-list>div {
+            width: 100%;
+            height: 100%;
+            padding: 0.1rem 0.2rem;
+            box-sizing: border-box;
+        }
+
+        #interface-top {
+            width: 8rem;
+            margin-top: 0.21rem;
+            color: #FFFFFF;
+            font-size: 0.16rem;
+            background-color: #3C3C3C;
+            padding: 0.15rem;
+            box-sizing: border-box;
+        }
+
+        #interface-top>.box-center {
+            padding: 0.05rem;
+            margin: 0rem 0.2rem;
+            border: 1px solid #666666;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="box-column">
+        <div class="box-row" id="tab-top">
+            <svg class="icon tab-top-item" aria-hidden="true">
+                <use xlink:href="#icondaima"></use>
+            </svg>
+            <span class="tab-top-item">项目</span>
+            <span class="tab-top-item">查看</span>
+            <span class="tab-top-item">选项</span>
+            <span class="tab-top-item">帮助</span>
+        </div>
+        <div class="box-row" id="content">
+            <div id="nav" class="box-column">
+                <div id="nav-top" class="box-row">
+                    <div class="box-column" id="nav-slider">
+                        <span></span>
+                    </div>
+                    <div class="box-column">
+                        <svg class="icon nav-item active" aria-hidden="true" onclick="changeView(0)">
+                            <use xlink:href="#iconai-code"></use>
+                        </svg>
+                        <svg class="icon nav-item" aria-hidden="true" onclick="changeView(1)">
+                            <use xlink:href="#iconzu"></use>
+                        </svg>
+                        <svg class="icon nav-item" aria-hidden="true" onclick="changeView(2)">
+                            <use xlink:href="#iconlianjie"></use>
+                        </svg>
+                        <svg class="icon nav-item" aria-hidden="true" onclick="changeView(3)">
+                            <use xlink:href="#iconshujuku"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div id="nav-bottom" class="box-column">
+                    <svg class="icon nav-item" aria-hidden="true">
+                        <use xlink:href="#iconshezhi"></use>
+                    </svg>
+                    <svg class="icon nav-item" aria-hidden="true">
+                        <use xlink:href="#iconuser"></use>
+                    </svg>
+                </div>
+            </div>
+            <div id="tree-viewer">
+                <div class="box-column active">
+                    <div class="box-between tree-top">
+                        <span class="tree-top-title">视图资源管理器</span>
+                        <svg class="icon tree-more-icon" aria-hidden="true">
+                            <use xlink:href="#iconshenglvehao"></use>
+                        </svg>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(0)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">打开的编辑器</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column">
+                            <div class="tree-low-item close ">
+                                <span class="box-row">文件</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-column tree-item" id="file-resource">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(1)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">资源文件管理器</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column" id="file-catalogue">
+                        </div>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(2)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">视图结构目录</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column" id="view-catalogue"></div>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(3)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">静态市场</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column">
+                        </div>
+                    </div>
+                </div>
+                <div class="box-column">
+                    <div class="box-between tree-top">
+                        <span class="tree-top-title">函数管理</span>
+                        <svg class="icon tree-more-icon" aria-hidden="true">
+                            <use xlink:href="#iconshenglvehao"></use>
+                        </svg>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(4)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">正在测试的函数</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column"></div>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(5)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">函数目录</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column"></div>
+                    </div>
+                </div>
+                <div class="box-column">
+                    <div class="box-between tree-top">
+                        <span class="tree-top-title">接口管理器</span>
+                        <svg class="icon tree-more-icon" aria-hidden="true">
+                            <use xlink:href="#iconshenglvehao"></use>
+                        </svg>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(6)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">正在测试的接口</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column"></div>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(7)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">接口目录</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column" id="interface-catalogue"></div>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(8)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">接口市场</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column"></div>
+                    </div>
+                </div>
+                <div class="box-column">
+                    <div class="box-between tree-top">
+                        <span class="tree-top-title">数据库管理器</span>
+                        <svg class="icon tree-more-icon" aria-hidden="true">
+                            <use xlink:href="#iconshenglvehao"></use>
+                        </svg>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(9)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">打开的数据表</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column"></div>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(10)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">项目数据表</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column" id="database-catalogue"></div>
+                    </div>
+                    <div class="box-column tree-item">
+                        <div class="box-between">
+                            <div class="box-row" onclick="openTreeViewer(11)">
+                                <svg class="icon arrow-right-icon" aria-hidden="true">
+                                    <use xlink:href="#iconjiantou"></use>
+                                </svg>
+                                <span class="tree-item-title">接口生成sql管理</span>
+                            </div>
+                            <svg class="icon tree-close-icon" aria-hidden="true">
+                                <use xlink:href="#iconiconclose"></use>
+                            </svg>
+                        </div>
+                        <div class="box-column"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="work-viewer" class="box-column">
+                <div class="box-row" id="viewer-top">
+                </div>
+                <div id="file-viewer-content" class="viewer-content active">
+                    <textarea name="fileContent" id="file-text-area" cols="30" rows="10"></textarea>
+                </div>
+                <div id="function-viewer-content" class="viewer-content">
+
+                </div>
+                <div id="view-viewer-content" class="viewer-content">
+                    <div class="box-between">
+                        <span></span>
+                        <img src="./images/telphone.jpg" alt="" id="view-img">
+                    </div>
+                </div>
+                <div id="interface-viewer-content" class="viewer-content">
+                    <div class="box-column">
+                        <div class="box-row" id="interface-top">
+                            <span class="box-center">修改接口</span>
+                            <span class="box-center">跳转到接口对应页面</span>
+                        </div>
+                        <div class="box-column" id="interface-list"></div>
+                    </div>
+                </div>
+                <div id="database-viewer-content" class="viewer-content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/xw.js"></script>
+    <script src="./js/base.js"></script>
+    <script src="./res/json/file.js"></script>
+    <script src="./res/font/iconfont.js"></script>
+    <script>
+        // doProhibit();
+
+        //更改应用主视图
+        function changeView(i) {
+            document.querySelectorAll("#tree-viewer>.box-column").forEach(function (ele, index) {
+                if (index != i) {
+                    ele.setAttribute("class", "box-column")
+                    return;
+                }
+                ele.setAttribute("class", "box-column active")
+            })
+            document.querySelectorAll("#nav-top>.box-column>.nav-item").forEach(function (ele, index) {
+                if (index != i) {
+                    ele.setAttribute("class", "icon nav-item");
+                    return;
+                }
+                ele.setAttribute("class", "icon nav-item active");
+            })
+            window["nav-slider"].style.transform = "translateY(" + 0.6 * i + "rem)";
+        };
+
+        //打开特定文件树目录
+        function openTreeViewer(i) {
+            var dom = document.querySelectorAll(".tree-item")[i];
+            if (dom.className.indexOf("open") != -1) {
+                dom.setAttribute("class", "box-column tree-item");
+                return;
+            }
+            dom.setAttribute("class", "box-column tree-item open");
+            dom = null;
+        }
+
+        //加载文件树目录
+        function loadTreeCatalogue(domStr, catalogueData, runStr) {
+            function getDomHtml(file, path) {
+                return `
+                <div class="tree-low-item close ` + file.type +
+                    `" onclick="` + runStr + `('` + path + `',this)">
+                    <span class="box-row">` + file.title + `</span>
+                </div>
+                `
+            };
+
+            function load(obj, dom, path) {
+                for (var key in obj) {
+                    if (obj.hasOwnProperty(key)) {
+                        if (!obj[key]) {
+                            console.warn("含有空文件或文件夹！");
+                            continue;
+                        }
+                        //初始化文件（文件夹）状态
+                        obj[key].title = key;
+                        obj[key].active = false;
+                        itemDomIndex++;
+                        dom.insertAdjacentHTML("beforeend", getDomHtml(obj[key], path + key, itemDomIndex));
+                        if (obj[key].children) {
+                            load(obj[key].children, document.querySelectorAll(domStr + " .tree-low-item")[
+                                itemDomIndex], path + key + "/");
+                        }
+                    }
+                }
+            }
+            var itemDomIndex = -1;
+            load(catalogueData, document.querySelector(domStr), "")
+        }
+
+        //根据文件路径获取文件
+        function findFileByPath(path, catalogueData) {
+            var temp = catalogueData;
+            var pathArr = path.split("/");
+            var file;
+            if (pathArr.some(function (ele) {
+                    if (ele && temp[ele]) {
+                        file = temp[ele];
+                        if (temp[ele].type == "file") {
+                            return true;
+                        };
+                        temp = temp[ele].children;
+                    }
+                    return false;
+                })) {
+                temp = null;
+                pathArr = null;
+                return file;
+            } else {
+                temp = null;
+                pathArr = null;
+                return false;
+            }
+        }
+
+        //打开本地资源文件
+        function openFile(path, ele) {
+            function addFileLabel(title, path) {
+                var htmlInner = `
+                    <div class="box-center viewer-title active" view-type="file"
+                    onclick="setActiveFile(this,'` + path + `')">
+                        <span>` + title + `</span>
+                    </div>`;
+                document.querySelectorAll(".viewer-title").forEach(function (ele) {
+                    ele.setAttribute("class", "box-center viewer-title")
+                })
+                window["viewer-top"].insertAdjacentHTML("beforeend", htmlInner);
+                htmlInner = null;
+            }
+            event.cancelBubble = true;
+            var file = findFileByPath(path, projectFile);
+            if (file && !file.active) {
+                file.active = true;
+                addFileLabel(file.title, path);
+            }
+            var viewerDom;
+            if (file.type == "file") {
+                window["file-text-area"].value = file.content;
+                viewerDom = document.querySelectorAll(".viewer-content");
+                viewerDom.forEach(function (ele) {
+                    ele.setAttribute("class", "viewer-content");
+                });
+                viewerDom[0].setAttribute("class", "viewer-content active");
+                viewerDom = null;
+            }
+            if (!ele) {
+                return;
+            }
+            if (ele.className.indexOf("close") != -1) {
+                ele.className = ele.className.replace("close", "");
+            } else {
+                ele.className += " close";
+            }
+            file = null;
+        }
+
+        //打开视图文件
+        function openView(path, ele) {
+            function addFileLabel(title, path) {
+                var htmlInner = `
+            <div class="box-center viewer-title active" view-type="view"
+            onclick="setActiveFile(this,'` + path + `')">
+                <span>` + title + `</span>
+            </div>`;
+                document.querySelectorAll(".viewer-title").forEach(function (ele) {
+                    ele.setAttribute("class", "box-center viewer-title")
+                })
+                window["viewer-top"].insertAdjacentHTML("beforeend", htmlInner);
+                htmlInner = null;
+            }
+            event.cancelBubble = true;
+            var file = findFileByPath(path, projectView);
+            if (file && !file.active) {
+                file.active = true;
+                addFileLabel(file.title, path);
+            }
+            var viewerDom;
+            if (file.type == "file") {
+                document.querySelector("#view-viewer-content span").innerHTML = file.content;
+                viewerDom = document.querySelectorAll(".viewer-content");
+                viewerDom.forEach(function (ele) {
+                    ele.setAttribute("class", "viewer-content");
+                });
+                viewerDom[2].setAttribute("class", "viewer-content active");
+                viewerDom = null;
+            }
+            if (!ele) {
+                return;
+            }
+            if (ele.className.indexOf("close") != -1) {
+                ele.className = ele.className.replace("close", "");
+            } else {
+                ele.className += " close";
+            }
+            file = null;
+        }
+
+        //打开接口文件
+        function openInterface(path, ele) {
+            function addFileLabel(title, path) {
+                var htmlInner = `
+                    <div class="box-center viewer-title active" view-type="interface"
+                    onclick="setActiveFile(this,'` + path + `')">
+                        <span>` + title + `</span>
+                    </div>`;
+                document.querySelectorAll(".viewer-title").forEach(function (ele) {
+                    ele.setAttribute("class", "box-center viewer-title")
+                })
+                window["viewer-top"].insertAdjacentHTML("beforeend", htmlInner);
+                htmlInner = null;
+            }
+            event.cancelBubble = true;
+            var file = findFileByPath(path, projectInterface);
+            if (file && !file.active) {
+                file.active = true;
+                addFileLabel(file.title, path);
+            }
+
+            var viewerDom;
+            if (file.type == "file") {
+                file.data.paramsStr = "";
+                file.data.params.map(function (el) {
+                    file.data.paramsStr += "<div class='box-row params-list'><div class='box-center'>" + el
+                        .name + "</div>" +
+                        "<div class='box-center'>" + el.type + "</div>" +
+                        "<div class='box-center'>" + el.filter + "</div></div>"
+                })
+                var temp = file.data;
+                window["interface-list"].innerHTML = `<div class='box-center'><span>话术：</span><font>` + temp.text +
+                    `</font></div>` +
+                    `<div class='box-between'>调用前函数：<span class="box-center">` + temp.before + `</span></div>` +
+                    `<div class='box-between'>调用后函数：<span class="box-center">` + temp.after + `</span></div>` +
+                    `<div class='box-between'>调用时函数：<span class="box-center">` + temp.runing + `</span></div>` +
+                    `<div class='box-between'>回调函数：<span class="box-center">` + temp.callback + `</span></div>` +
+                    `<div class='box-center'>参数列表：</div>` + temp.paramsStr
+
+
+
+                viewerDom = document.querySelectorAll(".viewer-content");
+                viewerDom.forEach(function (ele) {
+                    ele.setAttribute("class", "viewer-content");
+                });
+                viewerDom[3].setAttribute("class", "viewer-content active");
+                viewerDom = null;
+            }
+            if (!ele) {
+                return;
+            }
+            console.log(ele)
+            if (ele.className.indexOf("close") != -1) {
+                ele.className = ele.className.replace("close", "");
+            } else {
+                ele.className += " close";
+            }
+            file = null;
+        }
+
+        function openDatabase(path,ele){
+            
+            function addFileLabel(title, path) {
+                var htmlInner = `
+                    <div class="box-center viewer-title active" view-type="interface"
+                    onclick="setActiveFile(this,'` + path + `')">
+                        <span>` + title + `</span>
+                    </div>`;
+                document.querySelectorAll(".viewer-title").forEach(function (ele) {
+                    ele.setAttribute("class", "box-center viewer-title")
+                })
+                window["viewer-top"].insertAdjacentHTML("beforeend", htmlInner);
+                htmlInner = null;
+            }
+            event.cancelBubble = true;
+            var file = findFileByPath(path, projectDataBase);
+            if (file && !file.active) {
+                file.active = true;
+                addFileLabel(file.title, path);
+            }
+
+            var viewerDom;
+            if (file.type == "file") {
+                
+
+
+                viewerDom = document.querySelectorAll(".viewer-content");
+                viewerDom.forEach(function (ele) {
+                    ele.setAttribute("class", "viewer-content");
+                });
+                viewerDom[4].setAttribute("class", "viewer-content active");
+                viewerDom = null;
+            }
+            if (!ele) {
+                return;
+            }
+            if (ele.className.indexOf("close") != -1) {
+                ele.className = ele.className.replace("close", "");
+            } else {
+                ele.className += " close";
+            }
+            file = null;
+        }
+
+        //标题栏的标题按下时触发
+        function setActiveFile(ele, path) {
+            document.querySelectorAll(".viewer-title").forEach(function (ele) {
+                ele.setAttribute("class", "box-center viewer-title")
+            });
+            ele.setAttribute("class", "box-center viewer-title active");
+            var viewType = dealView[ele.getAttribute("view-type")];
+            var viewerDom = document.querySelectorAll(".viewer-content");
+            viewerDom.forEach(function (ele) {
+                ele.setAttribute("class", "viewer-content");
+            });
+            viewerDom[viewType.index].setAttribute("class", "viewer-content active");
+            viewType.run(path);
+            viewerDom = null;
+            viewType = null;
+        }
+
+        function addListenerCtrlS(run) {
+            //js监听键盘ctrl+s快捷键保存
+            document.addEventListener('keydown', function (e) {
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    e.preventDefault();
+                    run()
+                }
+            });
+        }
+        (function (win) {
+            var tid;
+
+            function setRemUtils() {
+                //设置视图标题栏的宽度
+                window["viewer-top"].style.maxWidth = content.offsetWidth - nav.offsetWidth - window["tree-viewer"]
+                    .offsetWidth + "px";
+            }
+
+            setRemUtils();
+            // 窗口变化时触发
+            win.addEventListener('resize', function () {
+                clearTimeout(tid);
+                tid = setTimeout(setRemUtils, 300);
+            }, false);
+            win.addEventListener('pageshow', function (e) {
+                if (e.persisted) {
+                    clearTimeout(tid);
+                    tid = setTimeout(setRemUtils, 300);
+                }
+            }, false);
+        })(window);
+
+
+        //对对应标识视图的标题点击时，点击事件需要的相关参数
+        var dealView = {
+            "file": {
+                index: 0,
+                run: openFile
+            },
+            "function": {
+                index: 1
+            },
+            "view": {
+                index: 2,
+                run: openView
+            },
+            "interface": {
+                index: 3,
+                run: openInterface
+            },
+            "database": {
+                index: 4,
+                run: openDatabase
+            }
+        }
+        loadTreeCatalogue("#file-catalogue", projectFile, "openFile");
+        loadTreeCatalogue("#view-catalogue", projectView, "openView");
+        loadTreeCatalogue("#interface-catalogue", projectInterface, "openInterface");
+        loadTreeCatalogue("#database-catalogue", projectDataBase, "openDatabase");
+
+
+        //按下Ctrl+s保存
+        addListenerCtrlS(function () {
+            alert("已保存")
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+body,
+html {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+body{
+    font-size: 0.16rem;
+}
+* {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+#main>*{
+    box-sizing: border-box;
+}
+
+/**基础布局
+    * @box-row dom内元素成行排列，垂直居中，水平居左
+    * @box-column dom内元素成列排列，垂直居中，水平居左
+    * @box-center dom内元素成行排列，垂直居中，水平居中
+    * @box-between dom内元素成行排列，垂直居中，水平居两侧
+**/
+.box-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.box-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+
+.box-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.box-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+/**
+* @icon基本样式
+*/
+.icon {
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.2rem;
+    vertical-align: -0.15rem;
+    fill: currentColor;
+    overflow: hidden;
+  }
